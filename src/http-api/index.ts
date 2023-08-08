@@ -125,6 +125,7 @@ export class MatrixHttpApi<O extends IHttpOpts> extends FetchHttpApi<O> {
                 xhr.setRequestHeader("Authorization", "Bearer " + this.opts.accessToken);
             }
             xhr.setRequestHeader("Content-Type", contentType);
+            xhr.setRequestHeader("Content-Range", opts.size?.toString() ?? "");
             xhr.send(file);
 
             abortController.signal.addEventListener("abort", () => {

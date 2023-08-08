@@ -125,6 +125,7 @@ export interface UploadOpts {
      *   Defaults to true.
      */
     includeFilename?: boolean;
+    size?: number;
     /**
      * Optional. Called when a chunk of
      *    data has been uploaded, with an object containing the fields `loaded`
